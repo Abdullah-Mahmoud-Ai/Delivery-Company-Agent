@@ -97,7 +97,7 @@ def get_management_overview(ctx: RunContext[ShippingAgentDeps]) -> str:
     
     """
     try:
-        return to_json(ctx.deps.api.get_mangement_overview())
+        return to_json(ctx.deps.api.get_management_overview())
 
     except ShippingAPIError as error:
         return f"API_ERROR: {error}"
@@ -260,9 +260,9 @@ def get_executive_report_data(ctx: RunContext[ShippingAgentDeps]) -> str:
     try:
         data = {
 
-            "mangement_overview": ctx.deps.api.get_mangement_overview(),
+            "management_overview": ctx.deps.api.get_management_overview(),
             "payments_summary": ctx.deps.api.get_payments_summary(),
-            "branches_performence": ctx.deps.api.get_branches_performance(),
+            "branches_performance": ctx.deps.api.get_branches_performance(),
             "delayed_shipments": ctx.deps.api.get_delayed_shipments(),
             "returns": ctx.deps.api.get_returns(),
 
@@ -411,7 +411,7 @@ def change_shipment_status(
 
         "delivered",
         "in_transit",
-        "delyed",
+        "delayed",
         "returned",
         "cancelled",
 

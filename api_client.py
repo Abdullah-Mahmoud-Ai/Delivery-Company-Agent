@@ -161,8 +161,8 @@ class ShippingAPIClient:
 
 
 
-    def get_mangement_overview(self) -> dict:
-        return self._get("/mangement/overview")
+    def get_management_overview(self) -> dict:
+        return self._get("/management/overview")
 
     
     
