@@ -1,0 +1,11 @@
+[project]
+name = "shipping-api-mock"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi>=0.139.0",
+    "pydantic-ai-slim[web]>=2.10.0",
+    "uvicorn>=0.50.0",
+]
